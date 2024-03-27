@@ -1,7 +1,11 @@
 resource "aws_instance" "instance" {
-  ami           = var.ami_m
-  instance_type = var.instance_type_m
-  vpc_security_group_ids = var.vpc_security_group_ids_m
+  ami                      = var.ami_m
+  instance_type            = var.instance_type_m
+  vpc_security_group_ids   = var.vpc_security_group_ids_m
+  spot_options             = {
+    instance_interruption_behavior = "stop"
+    spot_instance_type             = "persistent"
+  }
   tags          = var.tags_m
 }
 resource "aws_route53_record" "record" {
