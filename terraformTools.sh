@@ -1,4 +1,10 @@
 action=${1}
 
 terraform init
-terraform ${action} --auto-approve
+
+if [ "${action}" == "plan" ]; then
+terraform ${action}
+ exit
+fi
+
+terraform ${action} -auto-approve
