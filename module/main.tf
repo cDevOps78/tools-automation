@@ -5,6 +5,7 @@ resource "aws_instance" "instance" {
   tags                     = var.tags_m
 
   instance_market_options  = {
+    market_type            = "spot"
     spot_options = {
       instance_interruption_behavior = "stop"
       spot_instance_type             = "persistent"
