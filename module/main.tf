@@ -4,7 +4,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids   = var.vpc_security_group_ids_m
   tags                     = var.tags_m
 
-  instance_market_options {
+  instance_market_options {  // block
     market_type            = "spot"
     spot_options {
       instance_interruption_behavior = "stop"
