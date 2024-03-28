@@ -4,9 +4,9 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids   = var.vpc_security_group_ids_m
   tags                     = var.tags_m
 
-  instance_market_options  = {
+  instance_market_options {
     market_type            = "spot"
-    spot_options = {
+    spot_options {
       instance_interruption_behavior = "stop"
       spot_instance_type             = "persistent"
     }
@@ -20,3 +20,4 @@ resource "aws_route53_record" "record" {
   ttl               = 30
   records           = [aws_instance.instance.public_ip]
 }
+
