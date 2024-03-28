@@ -1,6 +1,6 @@
 format_version: 10
 pipelines:
-  tools-tf-Apply:
+  prometheusAnsible:
     group: expenseTools
     label_template: ${COUNT}
     lock_behavior: none
