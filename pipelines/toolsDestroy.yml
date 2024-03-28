@@ -25,7 +25,7 @@ pipelines:
               tasks:
                 - exec:
                     arguments:
-                      - terraform.sh
+                      - terraformTools.sh
                       - destroy
                     command: bash
                     run_if: passed
