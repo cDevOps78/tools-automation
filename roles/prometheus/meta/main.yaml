@@ -1,2 +1,2 @@
 dependencies:
-  - role: "node-exporter"
+  - role: node-exporter
