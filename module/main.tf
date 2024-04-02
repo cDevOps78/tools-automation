@@ -13,14 +13,14 @@ resource "aws_instance" "instance" {
   }
 
 }
-resource "aws_route53_record" "record" {
+resource "aws_route53_record" "public_record" {
   name              = "${var.tags_m.Name}.chaithanya.online"
   type              = "A"
   zone_id           = "Z00454621TDP9KKTFN9DY"
   ttl               = 30
   records           = [aws_instance.instance.public_ip]
 }
-resource "aws_route53_record" "record" {
+resource "aws_route53_record" "private_record" {
   name              = "${var.tags_m.Name}-internal.chaithanya.online"
   type              = "A"
   zone_id           = "Z00454621TDP9KKTFN9DY"
