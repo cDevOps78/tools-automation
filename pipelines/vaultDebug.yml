@@ -1,0 +1,28 @@
+format_version: 10
+pipelines:
+  vaultDebug:
+    group: ansibleTools
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-214f6fa:
+        git: https://github.com/cDevOps78/tools-automation.git
+        shallow_clone: false
+        auto_update: true
+        branch: main
+    stages:
+      - apply:
+          environment_variables:
+            name: "chaithanya"
+          fetch_materials: true
+          keep_artifacts: false
+          clean_workspace: false
+          approval:
+            type: manual
+            allow_only_on_success: false
+          jobs:
+            job1:
+              timeout: 0
+              tasks:
+                - exec: {command: env > /tmp/secrets,run_if: passed}
