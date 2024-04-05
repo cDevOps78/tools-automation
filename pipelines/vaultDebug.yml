@@ -15,6 +15,7 @@ pipelines:
       - apply:
           environment_variables:
             name: "chaithanya"
+            VAULT_TOKEN: "AES:ZQWZPht6e6q6eVa0nOzuxw==:aWi+t/APfeJDrO88FV2QAg=="
           fetch_materials: true
           keep_artifacts: false
           clean_workspace: false
