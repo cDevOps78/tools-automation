@@ -16,7 +16,7 @@ resource "aws_instance" "instance" {
 resource "aws_route53_record" "public_record" {
   name              = "${var.tags_m.Name}.chaithanya.online"
   type              = "A"
-  zone_id           = "Z00454621TDP9KKTFN9DY"
+  zone_id           = "Z0144525QEQQSOE8RRNR"
   ttl               = 30
   records           = [aws_instance.instance.public_ip]
 }
@@ -24,7 +24,7 @@ resource "aws_route53_record" "public_record" {
 resource "aws_route53_record" "private_record" {
   name              = "${var.tags_m.Name}-internal.chaithanya.online"
   type              = "A"
-  zone_id           = "Z00454621TDP9KKTFN9DY"
+  zone_id           = "Z0144525QEQQSOE8RRNR"
   ttl               = 30
   records           = [aws_instance.instance.private_ip]
 }

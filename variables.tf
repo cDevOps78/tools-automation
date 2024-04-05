@@ -14,3 +14,7 @@ variable "tags" {
     }
   }
 }
+
+variable "vpc_security_group_ids" {
+  default = ["sg-0a88820d7b4d3ff2a"]
+}
