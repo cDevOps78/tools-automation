@@ -8,7 +8,7 @@ variable "tags" {
     }
     vault = {
       tags = {
-        Name = "Vault"
+        Name = "vault"
         Project = "expense-project"
       }
     }
