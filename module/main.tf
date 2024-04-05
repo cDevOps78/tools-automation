@@ -14,7 +14,7 @@ resource "aws_instance" "instance" {
 
 }
 resource "aws_route53_record" "public_record" {
-  name              = "${var.tags_m.Name}.chaithanya.online"
+  name              = "${var.tags_m.Name}.azcart.online"
   type              = "A"
   zone_id           = "Z0144525QEQQSOE8RRNR"
   ttl               = 30
@@ -22,7 +22,7 @@ resource "aws_route53_record" "public_record" {
 }
 
 resource "aws_route53_record" "private_record" {
-  name              = "${var.tags_m.Name}-internal.chaithanya.online"
+  name              = "${var.tags_m.Name}-internal.azcart.online"
   type              = "A"
   zone_id           = "Z0144525QEQQSOE8RRNR"
   ttl               = 30
