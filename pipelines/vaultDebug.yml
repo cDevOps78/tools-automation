@@ -13,10 +13,11 @@ pipelines:
         branch: main
     stages:
       - apply:
-          environment_variables:
-            name: "chaithanya"
           secure_variables:
             VAULT_TOKEN: "AES:ZQWZPht6e6q6eVa0nOzuxw==:aWi+t/APfeJDrO88FV2QAg=="
+          environment_variables:
+            name: "chaithanya"
+            name1: "$name"
           fetch_materials: true
           keep_artifacts: false
           clean_workspace: false
