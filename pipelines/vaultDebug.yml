@@ -25,4 +25,4 @@ pipelines:
             job1:
               timeout: 0
               tasks:
-                - exec: {command: env > /tmp/secrets,run_if: passed}
+                - exec: {command: env ,run_if: passed}
