@@ -14,3 +14,4 @@ module "vault" {
   vpc_security_group_ids_m = var.vpc_security_group_ids
   tags_m = var.tags.vault.tags
 }
+
