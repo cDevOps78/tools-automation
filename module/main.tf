@@ -12,6 +12,12 @@ resource "aws_instance" "instance" {
 #    }
 #  }
 
+  lifecycle {
+    ignore_changes = [
+      ami,
+    ]
+  }
+
 }
 resource "aws_route53_record" "public_record" {
   name              = "${var.tags_m.Name}.azcart.online"
