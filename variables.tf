@@ -12,12 +12,6 @@ variable "tags" {
         Project = "expense-project"
       }
     }
-    ci = {
-      tags = {
-        Name = "ci"
-        Project = "expense-project"
-      }
-    }
     sonarqube = {
       tags = {
         Name = "sonarqube"

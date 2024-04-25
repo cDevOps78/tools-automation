@@ -15,13 +15,6 @@ module "vault" {
   tags_m = var.tags.vault.tags
 }
 
-module "ci" {
-  source = "./module"
-  ami_m  = "ami-090252cbe067a9e58"
-  instance_type_m = "t3.small"
-  vpc_security_group_ids_m = var.vpc_security_group_ids
-  tags_m = var.tags.ci.tags
-}
 
 module "sonarqube" {
   source = "./module"

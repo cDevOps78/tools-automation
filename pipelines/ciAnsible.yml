@@ -1,6 +1,6 @@
 format_version: 10
 pipelines:
-  ciAnsible:
+  workstationAnsible:
     group: ansibleTools
     label_template: ${COUNT}
     lock_behavior: none
@@ -26,6 +26,6 @@ pipelines:
                 - exec:
                     arguments:
                       - ansibleTools.sh
-                      - ci
+                      - workstation
                     command: bash
                     run_if: passed
