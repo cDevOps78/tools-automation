@@ -14,7 +14,7 @@ variable "tags" {
     }
     ci = {
       tags = {
-        Name = "ci-server"
+        Name = "ci"
         Project = "expense-project"
       }
     }
